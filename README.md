@@ -18,7 +18,8 @@ A sleek, animated personal portfolio built with **Next.js 14**, **Tailwind CSS**
 ---
 
 ## 🚀 Live Demo
-
+🎥 **Video Preview:**  
+![Demo](./demo.gif)
 👉 [**View Portfolio**](https://your-portfolio-link.vercel.app)  
 _Replace with your actual deployed link._
 
