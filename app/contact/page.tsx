@@ -1,21 +1,20 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "../layout";
-import { Mail, Github, Linkedin } from "lucide-react"; // ✅ uses lucide icons
-
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
   const { isDarkMode } = useContext(ThemeContext);
 
-  // 🎬 unique animation variant — fade, slide up, and rotate in
-  const fadeRotate = {
+  // 🎬 fade, slide up, and rotate in — type safe
+  const fadeRotate: Variants = {
     hidden: { opacity: 0, y: 40, rotateX: -10 },
     show: {
       opacity: 1,
       y: 0,
       rotateX: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }, // ✅ fixed easing array
     },
   };
 
@@ -36,7 +35,8 @@ export default function Contact() {
       >
         Get In <span className="text-purple-500">Touch</span>
       </motion.h1>
-            {/* Subtitle */}
+
+      {/* Subtitle */}
       <motion.p
         variants={fadeRotate}
         transition={{ delay: 0.4 }}
@@ -44,7 +44,8 @@ export default function Contact() {
           isDarkMode ? "text-gray-300" : "text-gray-700"
         }`}
       >
-        Whether you want to collaborate, talk about projects, or just say hi — feel free to reach out anytime.
+        Whether you want to collaborate, talk about projects, or just say hi —
+        feel free to reach out anytime.
       </motion.p>
 
       {/* Icon buttons */}

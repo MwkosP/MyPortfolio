@@ -1,14 +1,17 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function About() {
-  // Define a slightly different animation variant
-  const fadeSlide = {
+  // Type-safe animation variant
+  const fadeSlide: Variants = {
     hidden: { opacity: 0, x: -40 },
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: {
+        duration: 1,
+        ease: [0.16, 1, 0.3, 1], // ✅ replaced "easeOut" with valid easing array
+      },
     },
   };
 
@@ -34,15 +37,23 @@ export default function About() {
         transition={{ delay: 0.5 }}
         className="max-w-2xl text-lg leading-relaxed text-gray-400"
       >
-        I’m a <span className="text-purple-400 font-medium">Machine Learning & Web</span> enthusiast, currently in my final year as a{" "}
-        <span className="text-purple-400 font-medium">University of Macedonia</span> student.
+        I’m a{" "}
+        <span className="text-purple-400 font-medium">
+          Machine Learning & Web
+        </span>{" "}
+        enthusiast, currently in my final year as a{" "}
+        <span className="text-purple-400 font-medium">
+          University of Macedonia
+        </span>{" "}
+        student.
         <br />
         <br />
-        Passionate about  how AI can
-        enhance technologies and crafting smooth, interactive digital experiences. Familiarity with Python, Web, java c and more..
+        Passionate about how AI can enhance technologies and crafting smooth,
+        interactive digital experiences. Familiarity with Python, Web, Java, C,
+        and more.
       </motion.p>
 
-      {/* Optional: Animated divider */}
+      {/* Animated divider */}
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "80px" }}
@@ -53,8 +64,8 @@ export default function About() {
       {/* Call to action */}
       <motion.a
         href="/files/cv.html"
-          target="_blank"
-          rel="noopener noreferrer"
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
