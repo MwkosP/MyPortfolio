@@ -1,12 +1,12 @@
 "use client";
+
 import { useState, useEffect, createContext } from "react";
+import Head from "next/head"; // 👈 add Head for SEO metadata
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Particles from "@/components/Particles";
 import "./globals.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { metadata } from "./metadata";
-
 
 // 🟣 Create a ThemeContext (shared theme state)
 export const ThemeContext = createContext({
@@ -58,7 +58,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
+      <Head>
+        {/* ✅ Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="XLcExvzTzyf3PrfNEG06B7zSxJljnGjrQNlUZUuHUus"
+        />
+
+        {/* ✅ Basic SEO Metadata */}
+        <title>Panagiotis Mokos | AI & Web Developer</title>
+        <meta
+          name="description"
+          content="Explore the portfolio of Panagiotis Mokos — AI and Web Developer creating modern, fast, and elegant digital experiences."
+        />
+        <meta
+          name="keywords"
+          content="Panagiotis Mokos, AI Developer, Web Developer, Next.js, React, Portfolio"
+        />
+        <meta name="author" content="Panagiotis Mokos" />
+      </Head>
+
       <body className="relative min-h-screen overflow-hidden transition-colors duration-500">
+        {/* Background particles */}
         <div className="fixed inset-0 -z-50">
           <Particles
             particleCount={200}
