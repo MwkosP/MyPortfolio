@@ -47,3 +47,4 @@ Clone the repository and install dependencies:
 git clone https://github.com/yourusername/my-portfolio.git
 cd my-portfolio
 npm install
+npm run dev
