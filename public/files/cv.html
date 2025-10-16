@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Panagiotis Mokos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      padding-bottom: 15px;
+     
+    }
+
+    h1 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 32px;
+      margin: 0;
+      color: #2c3e50;
+    }
+    p{
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .contact {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #555;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: #3498db;
+      margin-top: 25px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 5px 0 15px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(135deg, #ffffff, #ecececfa); /* white to gray */
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #e0e6ed;
+      opacity: 0.9;
+      font-weight: bold;
+    }
+    #hrblue {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,      /* left fade */
+        #00eaff,          /* bright blue */
+        #007bff,          /* deep blue center */
+        #00eaff,          /* bright blue */
+        transparent       /* right fade */
+      );
+      box-shadow: 0 0 4px rgba(0, 122, 255, 0.7); /* softer glow */
+      border-radius: 50%;
+    }
+
+
+    img {
+      margin-top: 10px;
+      max-width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    @media print {
+      body, .container {
+        background: #fff !important; /* or your gradient */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .container {
+        max-width: 210mm;   /* A4 width */
+        padding: 10mm;      /* smaller padding for print */
+        box-shadow: none;   /* remove shadows in PDF */
+        margin: 0 auto;
+      }
+
+      img {
+        page-break-inside: avoid;  /* prevent images from splitting */
+        max-width: 100%; 
+        height: auto;
+      }
+
+      /* prevent page breaks inside these */
+      .section{
+        page-break-inside: avoid;
+      }
+      .card {
+        page-break-inside: avoid;
+        background: linear-gradient(135deg, #ffffff, #f2f2f2) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <header>
+    <h1>Panagiotis Mokos</h1>
+    <p class="contact" >
+      <span style="font-weight: bold;">Thessaloniki, Greece • Computer Science • University of Macedonia </span><br>
+      Email: <a href="mailto:mwkospanagiotis@gmail.com">mwkospanagiotis@gmail.com</a>
+      • Phone: <a href="tel:+306908514938">+30 6908514938</a><br>
+      GitHub: <a href="https://github.com/MwkosP" target="_blank">github.com/MwkosP</a> • LinkedIn: <a href="https://www.linkedin.com/in/panagiotis-mokos-09237a254/" target="_blank">Profile Link</a><br>
+      Portfolio: <a href="https://github.com/MwkosP" target="_blank">Portfolio Website</a>
+    </p>
+
+    
+    <hr id="hrblue">
+  </header>
+
+
+
+
+
+  <!--EDUCATION   -->
+  <section class="section">
+    <h2>Education / Certificates</h2>
+    <div class="card">
+      <p><strong>B.Sc. in Computer Science</strong><br>
+        University of Macedonia, Thessaloniki<br>
+        Final year of studies.
+      </p>
+      <ul>
+        <li>
+          <strong>English:</strong> C2 Proficiency – University of Michigan
+        </li>
+        <li>
+          <strong>German:</strong> B2 – Greek State Certificate of Language Proficiency (Κρατικό Πιστοποιητικό Γλωσσομάθειας)
+        </li>
+        <li><strong>Greek Language:</strong> Native</li>
+        <li>
+          <strong>Other Certificates:</strong>
+          courses in <em>Application Testing</em>, <em>Machine Learning</em>, and <em>Web Development</em>.
+        </li>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!--PROJECTS   -->
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="card">
+      <ul>
+          <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Technical-Analysis" target="_blank">
+              Technical Analysis Engine
+            </a>
+          </strong> – Fetches Live Market Data, computes technical indicators, and generates trading signals based on historically good labeled Thresholds.(Python/Libraries)  
+        </li>
+                <li>
+          <strong>
+            <a href="https://github.com/MwkosP/ProjectMLUni" target="_blank">
+              Bitcoin Mathematical Modeling
+            </a>
+          </strong> – Developed a machine learning project, applying algorithms and data processing techniques.
+        </li>
+        <li>
+          <a href="https://github.com/MwkosP/Face-Classification-with-Neural-Networks" target="_blank">
+            Neural Networks for Deepfake Face Image Detection
+          </a>/
+          <a href="https://github.com/MwkosP/Breast-Cancer-Classification-with-NN" target="_blank">
+            Breast Cancer Classification
+          </a>
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Barbershop-Website-Template" target="_blank">
+              Barbershop Website
+            </a>
+          </strong> – built  a responsive web application UI showcasing modern front-end development practices.Full-Stack (Next.js, React, Tailwind)
+        </li>
+        <li>
+
+
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Third-Portfolio-Attempt" target="_blank">
+              Portfolio Template
+            </a>
+          </strong> – Designed and deployed a portfolio-style website using HTML/CSS.
+        </li>
+                <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Mail-Automation-for-Personal-Use-" target="_blank">
+              Mail Automation for Personal Use
+            </a>
+          </strong> – Built Python scripts and workflows to automate email handling and delivery tasks.
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Wordle-Like-Game" target="_blank">
+              Wordle-Like Game
+            </a>
+          </strong> – Developed a word puzzle game in Java inspired by Wordle mechanics.
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Simple-Investment-Project" target="_blank">
+              Simple Investment Project (Java)
+            </a>
+          </strong> – Created a Java-based financial simulation and investment analysis tool.
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Bittensor-Subnet-Mining/tree/main?tab=readme-ov-file" target="_blank">
+              Currently Working on:
+            </a>
+          </strong> – Bittensor Subnet Mining.
+        </li>
+
+        <br>
+        <hr id="hrblue">
+        <div style="text-align: center;">More Projects inside Github: <a href="https://github.com/MwkosP" target="_blank">GitHub Profile</a></div>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+  
+  <!--SKILLS   -->
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        Languages
+        <ul>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>C</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="card">
+        Frameworks & Tools
+        <ul>
+          <li>Numpy, Pandas</li>
+          <li>Scikit-Learn, Ternsorflow, Pytorch, yfinance</li>
+          <li>FastApi</li>
+          <li>NextJS, React, Tailwind</li>
+          <li>VsCode, Jupyter Notebook, Google Colab</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+
+  <!--EXPERIENCE   -->
+  <section class="section">
+    <h2>Experience</h2>
+    <div class="card">
+      <p><strong>Freelance Projects (ML/Web)</strong><br>
+        Thessaloniki, Greece — 2023–2025
+      </p>
+      <ul>
+      <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Website-Oil-Gas" target="_blank">
+              Fuel Station Website 
+            </a>
+          </strong> – For Client(Full-Stack: Next.js and Backend)
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Face-Classification-with-Neural-Networks" target="_blank">
+              Neural Networks for Deepfake Face Image Detection
+            </a>
+          </strong> – designed and trained models to identify manipulated facial images using Deep and Transfer Learning.
+        </li>
+        <li>
+          <strong>
+            <a href="https://github.com/MwkosP/Breast-Cancer-Classification-with-NN" target="_blank">
+              Breast Cancer Classification
+            </a>
+          </strong> – implemented binary image classification models to assist in medical diagnostics.
+        </li>
+        
+        <li>
+          <strong>
+            <a  target="_blank">
+              University Coursework Projects
+            </a>
+          </strong> – delivered additional software and research-oriented solutions for paid academic assignments.
+        </li>
+
+        <li>
+          <strong>Volunteering:</strong> – Assisted in Uni Tech Event(Fosscom), Thessaloniki, 2025.
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+
+
+
+
+
+  <hr id="hrblue">
+  <footer style="text-align:center; font-size:12px; color:#777; margin-top:30px; padding-top:10px; border-top:1px solid #ddd;">
+    © 2025 Panagiotis Mokos. All rights reserved/ Made entirely with HTML,CSS
+
+  </footer>
+
+
+
+  </div>
+</body>
+</html>
