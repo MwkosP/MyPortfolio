@@ -1,48 +1,16 @@
+"use client";
+import { useState, useEffect, createContext } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Particles from "@/components/Particles";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import NavbarClient from "./components/NavbarClient";
-import Footer from "./components/Footer";
-import ThemeProvider from "./components/ThemeProvider";
+import { motion, AnimatePresence } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
-
-// ✅ Metadata (now valid because layout is a Server Component)
-export const metadata = {
-  title: "Panagiotis Mokos | AI & Web Developer Portfolio",
-  description:
-    "Explore Panagiotis Mokos' portfolio — AI & Web Developer specializing in modern, fast, and elegant web experiences using Next.js and AI technologies.",
-  openGraph: {
-    title: "Panagiotis Mokos | AI & Web Developer Portfolio",
-    description:
-      "Portfolio of Panagiotis Mokos — AI & Web Developer passionate about building elegant digital experiences.",
-    url: "https://my-portfolio-ten-weld.vercel.app",
-    siteName: "Panagiotis Mokos Portfolio",
-    images: [
-      {
-        url: "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Panagiotis Mokos Portfolio",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Panagiotis Mokos | Portfolio",
-    description:
-      "AI & Web Developer portfolio showcasing modern, interactive projects built with Next.js and Framer Motion.",
-    images: [
-      "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg",
-    ],
-  },
-};
-
-
-
-
-
+// 🟣 Create a ThemeContext (shared theme state)
+export const ThemeContext = createContext({
+  isDarkMode: true,
+  toggleTheme: () => {},
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
