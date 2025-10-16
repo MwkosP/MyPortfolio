@@ -12,6 +12,56 @@ export const ThemeContext = createContext({
   toggleTheme: () => {},
 });
 
+
+
+
+// ✅ Metadata for SEO & sharing
+export const metadata = {
+  title: "Panagiotis Mokos | AI & Web Developer Portfolio",
+  description:
+    "Explore Panagiotis Mokos' portfolio — AI & Web Developer specializing in modern, fast, and elegant web experiences using Next.js and AI technologies.",
+  keywords: [
+    "Panagiotis Mokos",
+    "AI Developer",
+    "Web Developer",
+    "Next.js",
+    "React",
+    "Portfolio",
+    "Machine Learning",
+  ],
+  openGraph: {
+    title: "Panagiotis Mokos | AI & Web Developer Portfolio",
+    description:
+      "Portfolio of Panagiotis Mokos — AI & Web Developer passionate about building elegant digital experiences.",
+    url: "https://my-portfolio-ten-weld.vercel.app",
+    siteName: "Panagiotis Mokos Portfolio",
+    images: [
+      {
+        url: "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg", // optional preview image
+        width: 1200,
+        height: 630,
+        alt: "Panagiotis Mokos Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Panagiotis Mokos | Portfolio",
+    description:
+      "AI & Web Developer portfolio showcasing modern, interactive projects built with Next.js and Framer Motion.",
+    images: [
+      "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg",
+    ],
+  },
+};
+
+
+
+
+
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
 
