@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import Particles from "@/components/Particles";
 import "./globals.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { metadata } from "./metadata";
+
 
 // 🟣 Create a ThemeContext (shared theme state)
 export const ThemeContext = createContext({
