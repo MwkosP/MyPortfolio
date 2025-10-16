@@ -1,34 +1,16 @@
-"use client";
-import { useState, useEffect, createContext } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Particles from "@/components/Particles";
 import "./globals.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { Inter } from "next/font/google";
+import NavbarClient from "./components/NavbarClient";
+import Footer from "./components/Footer";
+import ThemeProvider from "./components/ThemeProvider";
 
-// 🟣 Create a ThemeContext (shared theme state)
-export const ThemeContext = createContext({
-  isDarkMode: true,
-  toggleTheme: () => {},
-});
+const inter = Inter({ subsets: ["latin"] });
 
-
-
-
-// ✅ Metadata for SEO & sharing
+// ✅ Metadata (now valid because layout is a Server Component)
 export const metadata = {
   title: "Panagiotis Mokos | AI & Web Developer Portfolio",
   description:
     "Explore Panagiotis Mokos' portfolio — AI & Web Developer specializing in modern, fast, and elegant web experiences using Next.js and AI technologies.",
-  keywords: [
-    "Panagiotis Mokos",
-    "AI Developer",
-    "Web Developer",
-    "Next.js",
-    "React",
-    "Portfolio",
-    "Machine Learning",
-  ],
   openGraph: {
     title: "Panagiotis Mokos | AI & Web Developer Portfolio",
     description:
@@ -37,7 +19,7 @@ export const metadata = {
     siteName: "Panagiotis Mokos Portfolio",
     images: [
       {
-        url: "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg", // optional preview image
+        url: "https://my-portfolio-ten-weld.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Panagiotis Mokos Portfolio",
